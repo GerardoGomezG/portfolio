@@ -1,6 +1,6 @@
 * {
   margin: 0;
-  background-color: #1f1e1b;
+  background-color: #1b1a17; /* Gradient effect pending */
   font-family: 'Inconsolata', monospace;
 }
 
@@ -63,8 +63,12 @@ img {
   color: black;
 }
 
+section {
+  margin: 3em 0;
+}
+
 h1 {
-  margin-top: 5em;
+  margin-top: 2em;
   font-weight: 900;
   font-size: 2.5rem;
   text-align: center;
@@ -78,15 +82,103 @@ h2 {
   color: #f0e3ca;
 }
 
-.h3-container {
+h3 {
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+  color: #ff8303;
+}
+
+.p-container {
   width: 18em;
   margin-left: auto;
   margin-right: auto;
 }
 
-h3 {
+p {
   font-weight: 400;
   font-size: 1.5rem;
   text-align: justify;
   color: #f0e3ca;
+  background-color: transparent;
+}
+
+hr {
+  color: #111;
+}
+
+/* This code is for the logo at the beging of the About Me section */
+#aboutMeLogo {
+  margin: 0 auto;
+  height: 4em;
+}
+
+.skillsContainer {
+  display: grid;
+  justify-content: center;
+}
+
+.skillsContainer > div {
+  display: inline-flex;
+  margin: 1em;
+  padding-left: 5em;
+  height: 3.75em;
+  width: 17.8em;
+  background-color: #21201d;
+  border-radius: 0.75em;
+  gap: 1em;
+  align-items: center;
+}
+
+.myWorks {
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  width: 24em;
+  height: auto;
+}
+
+.newsBlog {
+  display: grid;
+  align-items: center;
+  gap: 0.75em;
+  background-image: url(./images/travel.png);
+  background-size: cover;
+  background-color: #21201d;
+  background-blend-mode: multiply;
+}
+
+.newsBlog > h3 {
+  margin-top: 1em;
+  background-color: transparent;
+}
+
+.newsBlog > hr {
+  margin-left: 3.5em;
+  margin-right: 3.5em;
+  color: #ff8303;
+}
+
+.newsBlog > p {
+  display: flex;
+  justify-content: center;
+  margin: 0 2.5em;
+  font-size: 1rem;
+}
+
+.newsBlog > button {
+  height: 3em;
+  width: 8em;
+  background-color: #32312e;
+  border-radius: 0.25em;
+  border-style: none;
+  color: #f0e3ca;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em;
+}
+
+.blank > img {
+  width: 24em;
+  height: auto;
 }
