@@ -1,18 +1,31 @@
 * {
   margin: 0;
+  padding: 0;
   background-color: #1b1a17; /* Gradient effect pending */
   font-family: 'Inconsolata', monospace;
 }
 
 header {
   display: flex;
-  margin: 1em;
+  position: fixed;
+  width: 90dvw;
+  margin: 0 5dvw;
+  top: 0;
+  left: 0;
   justify-content: space-between;
 }
 
 img {
   display: flex;
   height: 2.5em;
+}
+
+#avatar {
+  display: flex;
+  margin: 2em auto;
+  height: auto;
+  max-width: 629px;
+  width: 70dvw;
 }
 
 .menu-button {
@@ -90,7 +103,7 @@ h3 {
 }
 
 .p-container {
-  width: 18em;
+  width: 80dvw;
   margin-left: auto;
   margin-right: auto;
 }
@@ -107,7 +120,6 @@ hr {
   color: #111;
 }
 
-/* This code is for the logo at the beging of the About Me section */
 #aboutMeLogo {
   margin: 0 auto;
   height: 4em;
@@ -116,14 +128,15 @@ hr {
 .skillsContainer {
   display: grid;
   justify-content: center;
+  margin: 0 15dvw;
 }
 
 .skillsContainer > div {
   display: inline-flex;
   margin: 1em;
-  padding-left: 5em;
+  padding-left: 4dvw;
   height: 3.75em;
-  width: 17.8em;
+  width: 70dvw;
   background-color: #21201d;
   border-radius: 0.75em;
   gap: 1em;
@@ -131,19 +144,18 @@ hr {
 }
 
 .myWorks {
-  display: grid;
-  margin-left: auto;
-  margin-right: auto;
-  width: 24em;
-  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .newsBlog {
   display: grid;
+  max-width: 320px;
+  width: 80dvw;
   align-items: center;
-  gap: 0.75em;
   background-image: url(./images/travel.png);
-  background-size: cover;
+  background-size: contain;
   background-color: #21201d;
   background-blend-mode: multiply;
 }
@@ -162,7 +174,7 @@ hr {
 .newsBlog > p {
   display: flex;
   justify-content: center;
-  margin: 0 2.5em;
+  margin: 1em 2.5em;
   font-size: 1rem;
 }
 
@@ -179,6 +191,7 @@ hr {
 }
 
 .blank > img {
-  width: 24em;
+  max-width: 320px;
+  width: 80dvw;
   height: auto;
 }
