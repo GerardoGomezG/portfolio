@@ -8,8 +8,8 @@
 header {
   display: flex;
   position: fixed;
-  width: 90dvw;
-  margin: 0 5dvw;
+  width: 90vw;
+  margin: 0 5vw;
   top: 0;
   left: 0;
   justify-content: space-between;
@@ -25,7 +25,7 @@ img {
   margin: 2em auto;
   height: auto;
   max-width: 629px;
-  width: 70dvw;
+  width: 70vw;
 }
 
 .menu-button {
@@ -103,7 +103,7 @@ h3 {
 }
 
 .p-container {
-  width: 80dvw;
+  width: 80vw;
   margin-left: auto;
   margin-right: auto;
 }
@@ -128,15 +128,15 @@ hr {
 .skillsContainer {
   display: grid;
   justify-content: center;
-  margin: 0 15dvw;
+  margin: 0 15vw;
 }
 
 .skillsContainer > div {
   display: inline-flex;
   margin: 1em;
-  padding-left: 4dvw;
+  padding-left: 4vw;
   height: 3.75em;
-  width: 70dvw;
+  width: 70vw;
   background-color: #21201d;
   border-radius: 0.75em;
   gap: 1em;
@@ -152,7 +152,7 @@ hr {
 .newsBlog {
   display: grid;
   max-width: 320px;
-  width: 80dvw;
+  width: 80vw;
   align-items: center;
   background-image: url(./images/travel.png);
   background-size: contain;
@@ -192,6 +192,6 @@ hr {
 
 .blank > img {
   max-width: 320px;
-  width: 80dvw;
+  width: 80vw;
   height: auto;
 }
