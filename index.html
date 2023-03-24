@@ -8,9 +8,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700;900&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="styles.css">
-        <link rel="icon" href="./images/logo.png">
+        <link rel="icon" href="./images/avatar.png">
         <title>Gerardo's Portfolio</title>
-        <!--<script src="myscripts.js"></script>-->
     </head>
     <header>
         <div>
@@ -29,10 +28,72 @@
         </div>-->
     </header>
     <body>
-        <h1>Gerardo Gomez</h1><br>
-        <h2>Frontend Developer</h2><br>
-        <div class="h3-container">
-            <h3>Frontend Developer with a degree in Electrical Engineering who enjoys working on projects</h3>
-        </div>
+        <section id="welcome">
+            <h1>Gerardo Gomez</h1><br>
+            <h2>Frontend Developer</h2><br>
+            <div class="p-container">
+                <p>Frontend Developer with a degree in Electrical Engineering who enjoys working on projects</p>
+            </div>
+            <div id="avatar-container">
+                <img id="avatar" src="./images/avatar.png" alt="my avatar">
+            </div>
+        </section><hr>
+        <section id="about-me">
+            <img id="aboutMeLogo" src="./images/icons/Logo.png" alt="logo"><br>
+            <div class="p-container">
+                <p>A few years ago, I became interested in developing websites and interfaces. 
+                    Since then I have been steadily improving my skills. Now I am developing websites and
+                    web applications to order or for myself.
+                </p>
+            </div>
+        </section><hr>
+        <section id="skills">
+            <h3>My Skills</h3><br>
+            <div class="skillsContainer">
+                <div class="htmlContainer">
+                    <img src="./images/icons/icon html.png" alt="html logo">
+                    <p>HTML 5</p>
+                </div>
+                <div class="cssContainer">
+                    <img src="./images/icons/icon css.png" alt="css logo">
+                    <p>CSS3</p>
+                    </p>
+                </div>
+                <div class="jsContainer">
+                    <img src="./images/icons/icon js.png" alt="js logo">
+                    <p>JavaScript</p>
+                </div>
+                <div class="scssContainer">
+                    <img src="./images/icons/icon scss.png" alt="scss logo">
+                    <p>SCSS</p>
+                </div>
+                <div class="gitContainer">
+                    <img src="./images/icons/icon git.png" alt="git logo">
+                    <p>Git</p>
+                </div>
+            </div>
+        </section><hr>
+        <section id="portfolio">
+            <h3>My Works</h3><br>
+            <div class="myWorks">
+                <div class="newsBlog">
+                    <h3>News Blog</h3>
+                    <p>HTML, SCSS, JS</p>
+                    <hr>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis ea ipsa numquam reiciendis minima enim, animi, officia tenetur id atque perferendis officiis eligendi maiores ab fugit in repellendus quibusdam? Hic!</p>
+                    <button type="button">See more &rarr;</button>
+                </div>
+                <div class="blank">
+                    <img src="./images/travel.png">
+                </div>
+                <div class="newsBlog">
+                    <h3>News Blog</h3>
+                    <p>HTML, SCSS, JS</p>
+                    <hr>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis ea ipsa numquam reiciendis minima enim, animi, officia tenetur id atque perferendis officiis eligendi maiores ab fugit in repellendus quibusdam? Hic!</p>
+                    <button type="button">See more &rarr;</button>
+                </div>
+            </div>
+        </section>
     </body>
 </html>
