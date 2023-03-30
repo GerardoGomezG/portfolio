@@ -12,7 +12,7 @@
         <title>Gerardo's Portfolio</title>
     </head>
     <header>
-        <div>
+        <div class="logoContainer">
             <img src="./images/logo.png" alt="Gerardo Gomez">
         </div>
         <div class="menu-button"> <!--onclick="myFunction(this)">-->
@@ -20,12 +20,12 @@
             <div class="menu-button-bar2"></div>
             <div class="menu-button-bar3"></div>
         </div>
-        <!--<div class="menu">
-            <a href="#home">Home</a>
-            <a href="#works">Works</a>
-            <a href="#about-me">About me</a>
-            <a href="#contact-me">Contact me</a>
-        </div>-->
+        <div class="menu-tablet">
+            <div><a href="#about-me">About Me</a></div>
+            <div><a href="#skills">Skills</a></div>
+            <div><a href="#portfolio">My Works</a></div>
+            <div><a href="#footer">Contacts</a></div>
+        </div>
     </header>
     <body>
         <section id="welcome">
@@ -94,6 +94,42 @@
                     <button type="button">See more &rarr;</button>
                 </div>
             </div>
+        </section><hr>
+        <section id="footer">
+            <img id="footerLogo" src="./images/logo.png" alt="logo"><br>
+            <div class="p-container">
+                <p>If you liked my work and you need me, I'm ready to talk to you.</p>
+            </div><br><br>
+            <div>
+                <h4>Contacts</h4>
+                <div class="socialNetworks">
+                    <div class="emailContainer">
+                        <img src="./images/icons/icon mail.png" alt="email logo">
+                        <ol>ing.gerardogomez@gmail.com</ol>
+                    </div>
+                    <div class="telegramContainer">
+                        <img src="./images/icons/icon telegram.png" alt="telegram logo">
+                        <a href="https://t.me/GerardoGomezG" target="_blank" rel="noopener">GerardoGomezG</a>
+                    </div>
+                    <div class="gitHubContainer">
+                        <img src="./images/icons/icon github.png" alt="github logo">
+                        <a href="https://github.com/GerardoGomezG" target="_blank" rel="noopener">GerardoGomezG</a>
+                    </div>
+                    <div class="figmaContainer">
+                        <img src="./images/icons/icon figma.png" alt="figma logo">
+                        <a href="https://figma.com/@gerardogomezg" target="_blank" rel="noopener">GerardoGomezG</a>
+                    </div>
+                </div>
+            </div>            
+            <form action="https://formspree.io/f/xknavyeb" method="POST">
+                <label for="name">Name:</label><br>
+                <input type="text" name="name" maxlength="30" placeholder="Enter your full name" required><br>
+                <label for="e-mail">e-mail:</label><br>
+                <input type="email" name="email" placeholder="Enter your e-mail" required><br>
+                <label for="message">Message:</label><br>
+                <textarea name="message" placeholder="Leave a message" rows="17" cols="30" maxlength="500" required></textarea><br>
+                <button type="submit">Submit</button><br>
+            </form>
         </section>
     </body>
 </html>
