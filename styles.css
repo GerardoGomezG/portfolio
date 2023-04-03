@@ -92,6 +92,13 @@ hr {
 .welcomeContainer > * {
   display: inline-flex;
   text-align: left;
+  text-decoration: none;
+}
+
+.blank > img {
+  max-width: 320px;
+  width: 80vw;
+  height: auto;
 }
 
 form > button {
@@ -103,6 +110,45 @@ form > button {
   background-color: #ff8303;
   color: #1b1a17;
   font-weight: bold;
+}
+
+.newsBlog > button {
+  height: 3em;
+  width: 8em;
+  background-color: #32312e;
+  border-radius: 0.25em;
+  border-style: none;
+  color: #f0e3ca;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em;
+  cursor: pointer;
+}
+
+.welcomeContainer > a > button {
+  display: inline-flex;
+  margin: 1em 0 1em auto;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 1em;
+  width: fit-content;
+  border-radius: 10px;
+  border-color: #f0e3ca;
+  background-color: #ff8303;
+  color: #1b1a17;
+  font-weight: bolder;
+}
+
+.socialNetworks > div > img {
+  width: 1em;
+  height: auto;
+  margin-right: 1em;
+}
+
+.welcomeContainer > a > button > img {
+  background-color: transparent;
 }
 
 .newsBlog {
@@ -135,25 +181,6 @@ form > button {
   font-size: 1rem;
 }
 
-.newsBlog > button {
-  height: 3em;
-  width: 8em;
-  background-color: #32312e;
-  border-radius: 0.25em;
-  border-style: none;
-  color: #f0e3ca;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 2em;
-  cursor: pointer;
-}
-
-.blank > img {
-  max-width: 320px;
-  width: 80vw;
-  height: auto;
-}
-
 .socialNetworks > div > a:link {
   color: #ff8303;
   background-color: transparent;
@@ -182,12 +209,6 @@ form > button {
   display: flex;
   height: 2.5em;
   align-items: center;
-}
-
-.socialNetworks > div > img {
-  width: 1em;
-  height: auto;
-  margin-right: 1em;
 }
 
 label,
@@ -255,13 +276,13 @@ textarea {
   .menu-tablet > div > a:hover {
     color: #ff8303;
     background-color: transparent;
-    text-decoration: underline;
+    text-decoration: none;
   }
 
   .menu-tablet > div > a:active {
     color: #a35709;
     background-color: transparent;
-    text-decoration: underline;
+    text-decoration: none;
   }
 
   #welcome > .p-container {
