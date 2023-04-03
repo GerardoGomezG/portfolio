@@ -187,6 +187,7 @@ form > button {
 .socialNetworks > div > img {
   width: 1em;
   height: auto;
+  margin-right: 1em;
 }
 
 label,
