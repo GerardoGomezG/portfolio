@@ -82,12 +82,27 @@ hr {
   align-items: center;
 }
 
+.welcomeContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  row-gap: 1em;
+}
+
+.welcomeContainer > * {
+  display: inline-flex;
+  text-align: left;
+}
+
 form > button {
   cursor: pointer;
+  padding: 1em;
   width: fit-content;
-  border-color: #ff8303;
   border-radius: 10px;
-  color: #f0e3ca;
+  border-color: #f0e3ca;
+  background-color: #ff8303;
+  color: #1b1a17;
+  font-weight: bold;
 }
 
 .newsBlog {
@@ -194,20 +209,12 @@ textarea {
   display: flex;
   width: 15em;
   margin: 1em 0;
-  padding: 1em .5em;
+  padding: 1em 8px;
   border-color: #ff8303;
   border-radius: 10px;
   color: #f0e3ca;
   font-size: 1rem;
   resize: none;
-}
-
-form > button {
-  padding: 1em;
-  border-color: #f0e3ca;
-  background-color: #ff8303;
-  color: #1b1a17;
-  font-weight: bold;
 }
 
 @media screen and (min-width: 501px) {
@@ -261,6 +268,11 @@ form > button {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 4em;
+  }
+
+  .welcomeContainer {
+    min-width: 350px;
+    width: 50vw;
   }
 
   #about-me {
@@ -399,6 +411,7 @@ form > button {
   }
 
   .p-container {
+    min-width: 260px;
     max-width: 339px;
     width: 80vw;
     margin-left: auto;
@@ -407,6 +420,11 @@ form > button {
 
   p {
     font-size: 1.5rem;
+  }
+
+  .welcomeContainer {
+    min-width: 240px;
+    width: 80vw;
   }
 
   .skillsContainer {

@@ -29,10 +29,12 @@
     </header>
     <body>
         <section id="welcome">
-            <h1>Gerardo Gomez</h1><br>
-            <h2>Frontend Developer</h2><br>
-            <div class="p-container">
-                <p>Frontend Developer with a degree in Electrical Engineering who enjoys working on projects</p>
+            <div class="welcomeContainer">
+                <h1>Gerardo Gomez</h1><br>
+                <h2>Frontend Developer</h2><br>
+                <div class="p-container">
+                    <p>Frontend Developer with a degree in Electrical Engineering who enjoys working on projects</p>
+                </div>
             </div>
             <div id="avatar-container">
                 <img id="avatar" src="./images/avatar.png" alt="my avatar">
@@ -99,7 +101,16 @@
             <img id="footerLogo" src="./images/logo.png" alt="logo"><br>
             <div class="p-container">
                 <p>If you liked my work and you need me, I'm ready to talk to you.</p>
-            </div><br><br>
+            </div><br>
+            <form action="https://formspree.io/f/xknavyeb" method="POST">
+                <label for="name">Name:</label><br>
+                <input type="text" name="name" maxlength="30" placeholder="Enter your full name" required><br>
+                <label for="e-mail">e-mail:</label><br>
+                <input type="email" name="email" placeholder="Enter your e-mail" required><br>
+                <label for="message">Message:</label><br>
+                <textarea name="message" placeholder="Leave a message" rows="17" cols="30" maxlength="500" required></textarea><br>
+                <button type="submit">Submit</button><br>
+            </form>
             <div>
                 <h4>Contacts</h4>
                 <div class="socialNetworks">
@@ -121,15 +132,7 @@
                     </div>
                 </div>
             </div>            
-            <form action="https://formspree.io/f/xknavyeb" method="POST">
-                <label for="name">Name:</label><br>
-                <input type="text" name="name" maxlength="30" placeholder="Enter your full name" required><br>
-                <label for="e-mail">e-mail:</label><br>
-                <input type="email" name="email" placeholder="Enter your e-mail" required><br>
-                <label for="message">Message:</label><br>
-                <textarea name="message" placeholder="Leave a message" rows="17" cols="30" maxlength="500" required></textarea><br>
-                <button type="submit">Submit</button><br>
-            </form>
+            
         </section>
     </body>
 </html>
