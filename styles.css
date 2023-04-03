@@ -194,11 +194,20 @@ textarea {
   display: flex;
   width: 15em;
   margin: 1em 0;
+  padding: 1em .5em;
   border-color: #ff8303;
   border-radius: 10px;
   color: #f0e3ca;
   font-size: 1rem;
   resize: none;
+}
+
+form > button {
+  padding: 1em;
+  border-color: #f0e3ca;
+  background-color: #ff8303;
+  color: #1b1a17;
+  font-weight: bold;
 }
 
 @media screen and (min-width: 501px) {
