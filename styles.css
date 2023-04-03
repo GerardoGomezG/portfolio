@@ -272,6 +272,7 @@ textarea {
 
   .welcomeContainer {
     min-width: 350px;
+    max-width: 500px;
     width: 50vw;
   }
 
