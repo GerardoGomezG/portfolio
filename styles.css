@@ -364,11 +364,12 @@ textarea {
 
   .socialNetworks {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    grid-template-columns: 18em 10em;
   }
 
   .socialNetworks > div {
-    width: 8em;
+    width: 16em;
     margin: 0 auto;
   }
 }
