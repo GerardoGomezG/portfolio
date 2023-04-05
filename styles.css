@@ -133,7 +133,7 @@ hr {
   height: auto;
 }
 
-form > button {
+form > div > button {
   cursor: pointer;
   padding: 1em;
   width: fit-content;
@@ -259,7 +259,7 @@ form {
   margin: 2em auto;
 }
 
-form > input,
+form > div > input,
 textarea {
   display: flex;
   margin: 1em 0;
@@ -383,10 +383,62 @@ input:-webkit-autofill:active {
     column-gap: 2em;
     justify-content: center;
   }
+
+  #footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 3em auto;
+    padding: 0 2em;
+    gap: 2em;
+    justify-content: space-around;
+  }
+
+  .socialNetworks > div {
+    width: auto;
+  }
+
+  #footer > div {
+    margin: 0 auto;
+  }
+
+  #footer > div > .p-container {
+    display: flex;
+    margin-top: 1.5em;
+    width: 240px;
+  }
+
+  h4 {
+    text-align: left;
+  }
+
+  form {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: 17em 17em;
+    max-width: max-content;
+    margin: 2em auto;
+  }
+
+  form > div > input {
+    width: 15em;
+  }
+
+  textarea {
+    width: 32em;
+    height: 9em;
+  }
+
+  .socialNetworks {
+    display: grid;
+    margin-top: 1em;
+    justify-content: center;
+    grid-template-columns: 18em 10em;
+  }
 }
 
 /* Tablet version */
-@media screen and (min-width: 620px) and (max-width: 1060px) {
+@media screen and (min-width: 620px) and (max-width: 1059px) {
   header {
     display: grid;
     grid-template-columns: auto;
@@ -478,13 +530,13 @@ input:-webkit-autofill:active {
     margin: 0 auto;
   }
 
-  #footer > .p-container > p {
+  #footer > div > .p-container > p {
     width: 80vw;
     max-width: 339px;
     margin: 0 auto;
   }
 
-  form > input,
+  form > div > input,
   textarea {
     width: 28em;
     max-height: 10em;
@@ -499,12 +551,11 @@ input:-webkit-autofill:active {
 
   .socialNetworks > div {
     width: auto;
-    margin-left: 5px;
   }
 }
 
 /* Mobile version */
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 619px) {
   header {
     display: flex;
     justify-content: space-between;
@@ -599,11 +650,12 @@ input:-webkit-autofill:active {
     align-items: center;
   }
 
-  section > img {
+  section > img,
+  section > div > img {
     margin: 0 auto;
   }
 
-  form > input,
+  form > div > input,
   textarea {
     width: 15em;
   }
