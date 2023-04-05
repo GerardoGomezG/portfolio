@@ -21,6 +21,30 @@ header {
   width: 100%;
 }
 
+.menu-tablet > div > a:link {
+  color: #f0e3ca;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.menu-tablet > div > a:visited {
+  color: #f0e3ca;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.menu-tablet > div > a:hover {
+  color: #ff8303;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.menu-tablet > div > a:active {
+  color: #a35709;
+  background-color: transparent;
+  text-decoration: none;
+}
+
 body {
   position: relative;
 }
@@ -249,7 +273,70 @@ input:-webkit-autofill:active {
   transition: background-color  5000s ease-in-out 0s;
 }
 
-@media screen and (min-width: 501px) {
+/* Desktop version */
+@media screen and (min-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+  .logoContainer {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .menu-tablet {
+    display: inline-flex;
+    text-align: right;
+    justify-content: space-around;
+    gap: 5em;
+    margin-right: auto;
+  }
+
+  #welcome {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .welcomeContainer {
+    min-width: 350px;
+    max-width: 500px;
+    width: 45vw;
+  }
+
+  #avatar {
+    margin: 0 auto;
+    height: auto;
+    max-width: 500px;
+    width: 45vw;
+  }
+
+  #about-me {
+    display: inline-flex;
+    margin: 4em 0;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+  }
+
+  #aboutMeLogo {
+    display: inline-flex;
+  }
+
+  #about-me > .p-container {
+    display: flex;
+    width: 65vw;
+    max-width: 600px;
+  }
+}
+
+@media screen and (min-width: 620px) and (max-width: 768px) {
   header {
     display: grid;
     grid-template-columns: auto;
@@ -268,30 +355,6 @@ input:-webkit-autofill:active {
     display: inline-flex;
     justify-content: space-around;
     margin: 1em 0;
-  }
-
-  .menu-tablet > div > a:link {
-    color: #f0e3ca;
-    background-color: transparent;
-    text-decoration: none;
-  }
-
-  .menu-tablet > div > a:visited {
-    color: #f0e3ca;
-    background-color: transparent;
-    text-decoration: none;
-  }
-
-  .menu-tablet > div > a:hover {
-    color: #ff8303;
-    background-color: transparent;
-    text-decoration: none;
-  }
-
-  .menu-tablet > div > a:active {
-    color: #a35709;
-    background-color: transparent;
-    text-decoration: none;
   }
 
   #welcome > .p-container {
@@ -390,7 +453,7 @@ input:-webkit-autofill:active {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 620px) {
   header {
     display: flex;
     justify-content: space-between;
@@ -452,7 +515,7 @@ input:-webkit-autofill:active {
 
   .p-container {
     min-width: 260px;
-    max-width: 339px;
+    max-width: 400px;
     width: 80vw;
     margin-left: auto;
     margin-right: auto;
