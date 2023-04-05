@@ -102,6 +102,15 @@ hr {
   color: #111;
 }
 
+/* For changing colors on my skills section images
+.hover_img {
+  display: none;
+}
+
+#skill img:hover .hover_img {
+  display: inline-flex;
+} */
+
 .myWorks {
   display: flex;
   flex-direction: column;
@@ -367,7 +376,8 @@ input:-webkit-autofill:active {
     align-items: center;
   }
 
-  .skillsContainer > div > img {
+  .skillsContainer img {
+    position: relative;
     margin: auto 1em;
     height: 8em;
     background-color: transparent;
@@ -392,6 +402,7 @@ input:-webkit-autofill:active {
     padding: 0 2em;
     gap: 2em;
     justify-content: space-around;
+    max-width: max-content;
   }
 
   .socialNetworks > div {
