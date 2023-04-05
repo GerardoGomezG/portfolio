@@ -121,6 +121,12 @@ hr {
   text-decoration: none;
 }
 
+.blank {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .blank > img {
   max-width: 320px;
   width: 80vw;
@@ -183,6 +189,7 @@ form > button {
   max-width: 320px;
   width: 80vw;
   align-items: center;
+  justify-content: center;
   background-image: url(./images/travel.png);
   background-size: contain;
   background-color: #21201d;
@@ -274,7 +281,7 @@ input:-webkit-autofill:active {
 }
 
 /* Desktop version */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1060px) {
   header {
     display: flex;
     justify-content: space-between;
@@ -300,7 +307,9 @@ input:-webkit-autofill:active {
 
   #welcome {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    column-gap: 2em;
   }
 
   .welcomeContainer {
@@ -334,9 +343,50 @@ input:-webkit-autofill:active {
     width: 65vw;
     max-width: 600px;
   }
+
+  .skillsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .skillsContainer > div {
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: 1em;
+    height: 23vw;
+    min-height: 270px;
+    max-height: 300px;
+    width: 20vw;
+    min-width: 180px;
+    max-width: 200px;
+    background-color: #21201d;
+    border-radius: 0.75em;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .skillsContainer > div > img {
+    margin: auto 1em;
+    height: 8em;
+    background-color: transparent;
+  }
+
+  .skillsContainer > div > p {
+    font-size: 2em;
+  }
+
+  .myWorks {
+    display: grid;
+    grid-template-columns: repeat(3, 320px);
+    column-gap: 2em;
+    justify-content: center;
+  }
 }
 
-@media screen and (min-width: 620px) and (max-width: 768px) {
+/* Tablet version */
+@media screen and (min-width: 620px) and (max-width: 1060px) {
   header {
     display: grid;
     grid-template-columns: auto;
@@ -453,6 +503,7 @@ input:-webkit-autofill:active {
   }
 }
 
+/* Mobile version */
 @media screen and (max-width: 620px) {
   header {
     display: flex;
@@ -514,7 +565,7 @@ input:-webkit-autofill:active {
   }
 
   .p-container {
-    min-width: 260px;
+    min-width: 240px;
     max-width: 400px;
     width: 80vw;
     margin-left: auto;
