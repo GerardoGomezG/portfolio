@@ -102,14 +102,34 @@ hr {
   color: #111;
 }
 
-/* For changing colors on my skills section images
+.blank > img {
+  max-width: 320px;
+  width: 80vw;
+  height: auto;
+}
+
+.socialNetworks > div > img {
+  width: 1em;
+  height: auto;
+  margin-right: 1em;
+}
+
+.welcomeContainer > a > button > img {
+  background-color: transparent;
+}
+
+/* For changing colors on my skills section images */
 .hover_img {
   display: none;
 }
 
-#skill img:hover .hover_img {
+#skills > div > div:hover .hover_img {
   display: inline-flex;
-} */
+}
+
+#skills > div > div:hover img:first-child {
+  display: none;
+}
 
 .myWorks {
   display: flex;
@@ -134,12 +154,6 @@ hr {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.blank > img {
-  max-width: 320px;
-  width: 80vw;
-  height: auto;
 }
 
 form > div > button {
@@ -180,16 +194,6 @@ form > div > button {
   background-color: #ff8303;
   color: #1b1a17;
   font-weight: bolder;
-}
-
-.socialNetworks > div > img {
-  width: 1em;
-  height: auto;
-  margin-right: 1em;
-}
-
-.welcomeContainer > a > button > img {
-  background-color: transparent;
 }
 
 .newsBlog {
@@ -377,7 +381,6 @@ input:-webkit-autofill:active {
   }
 
   .skillsContainer img {
-    position: relative;
     margin: auto 1em;
     height: 8em;
     background-color: transparent;
