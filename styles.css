@@ -99,7 +99,9 @@ p {
 }
 
 hr {
-  color: #111;
+  background-color: #111;
+  border: none;
+  height: 2px;
 }
 
 .blank > img {
@@ -111,7 +113,7 @@ hr {
 .socialNetworks > div > img {
   width: 1em;
   height: auto;
-  margin-right: 1em;
+  margin-right: 0.75em;
 }
 
 .welcomeContainer > a > button > img {
@@ -404,7 +406,7 @@ input:-webkit-autofill:active {
     flex-wrap: wrap;
     margin: 3em auto;
     padding: 0 2em;
-    gap: 2em;
+    gap: 3em;
     justify-content: space-around;
     max-width: max-content;
   }
@@ -420,7 +422,7 @@ input:-webkit-autofill:active {
   #footer > div > .p-container {
     display: flex;
     margin-top: 1.5em;
-    width: 240px;
+    width: 180px;
   }
 
   h4 {
@@ -448,7 +450,7 @@ input:-webkit-autofill:active {
     display: grid;
     margin-top: 1em;
     justify-content: center;
-    grid-template-columns: 18em 10em;
+    grid-template-columns: 17em 8.5em;
   }
 }
 
@@ -548,7 +550,7 @@ input:-webkit-autofill:active {
   #footer > div > .p-container > p {
     width: 80vw;
     max-width: 339px;
-    margin: 0 auto;
+    margin: 0 auto 2em auto;
   }
 
   form > div > input,
