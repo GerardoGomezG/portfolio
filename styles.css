@@ -106,7 +106,7 @@ hr {
 
 .blank > img {
   max-width: 320px;
-  width: 80vw;
+  width: 90vw;
   height: auto;
 }
 
@@ -202,18 +202,19 @@ form > div > button {
   display: grid;
   margin: 1em 0;
   max-width: 320px;
-  width: 80vw;
+  width: 90vw;
   align-items: center;
   justify-content: center;
   background-image: url(./images/travel.png);
   background-size: contain;
   background-color: #21201d;
   background-blend-mode: multiply;
+  aspect-ratio: 1 / 1;
 }
 
 .newsBlog > h3 {
   background-color: transparent;
-  margin-top: 1em;
+  margin-top: 5vw;
 }
 
 .newsBlog > hr {
@@ -401,11 +402,6 @@ input:-webkit-autofill:active {
     justify-content: center;
   }
 
-  .newsBlog {
-    max-height: 320px;
-    height: 80vw;
-  }
-
   #footer {
     display: flex;
     flex-direction: row;
@@ -547,11 +543,6 @@ input:-webkit-autofill:active {
 
   .skillsContainer > div > p {
     font-size: 2em;
-  }
-
-  .newsBlog {
-    max-height: 320px;
-    height: 80vw;
   }
 
   #footerLogo {
