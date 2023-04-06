@@ -176,7 +176,7 @@ form > div > button {
   color: #f0e3ca;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   cursor: pointer;
 }
 
@@ -199,6 +199,7 @@ form > div > button {
 .newsBlog {
   display: grid;
   margin: 1em 0;
+  max-height: 320px;
   max-width: 320px;
   width: 80vw;
   align-items: center;
@@ -210,8 +211,8 @@ form > div > button {
 }
 
 .newsBlog > h3 {
-  margin-top: 1em;
   background-color: transparent;
+  margin-top: 1em;
 }
 
 .newsBlog > hr {
@@ -223,7 +224,7 @@ form > div > button {
 .newsBlog > p {
   display: flex;
   justify-content: center;
-  margin: 1em 2.5em;
+  margin: 0.75em 2.5em;
   font-size: 1rem;
 }
 
@@ -341,7 +342,7 @@ input:-webkit-autofill:active {
   #about-me {
     display: inline-flex;
     margin: 4em 0;
-    width: 100vw;
+    width: 100%;
     align-items: center;
     justify-content: center;
     gap: 2em;
@@ -393,7 +394,7 @@ input:-webkit-autofill:active {
   .myWorks {
     display: grid;
     grid-template-columns: repeat(3, 320px);
-    column-gap: 2em;
+    column-gap: 1em;
     justify-content: center;
   }
 
