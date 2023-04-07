@@ -21,6 +21,30 @@ header {
   width: 100%;
 }
 
+.menu-tablet > div > a:link {
+  color: #f0e3ca;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.menu-tablet > div > a:visited {
+  color: #f0e3ca;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.menu-tablet > div > a:hover {
+  color: #ff8303;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.menu-tablet > div > a:active {
+  color: #a35709;
+  background-color: transparent;
+  text-decoration: none;
+}
+
 body {
   position: relative;
 }
@@ -75,7 +99,38 @@ p {
 }
 
 hr {
-  color: #111;
+  background-color: #111;
+  border: none;
+  height: 2px;
+}
+
+.blank > img {
+  max-width: 320px;
+  width: 90vw;
+  height: auto;
+}
+
+.socialNetworks > div > img {
+  width: 1em;
+  height: auto;
+  margin-right: 0.75em;
+}
+
+.welcomeContainer > a > button > img {
+  background-color: transparent;
+}
+
+/* For changing colors on my skills section images */
+.hover_img {
+  display: none;
+}
+
+#skills > div > div:hover .hover_img {
+  display: inline-flex;
+}
+
+#skills > div > div:hover img:first-child {
+  display: none;
 }
 
 .myWorks {
@@ -97,13 +152,13 @@ hr {
   text-decoration: none;
 }
 
-.blank > img {
-  max-width: 320px;
-  width: 80vw;
-  height: auto;
+.blank {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-form > button {
+form > div > button {
   cursor: pointer;
   padding: 1em;
   width: fit-content;
@@ -123,7 +178,7 @@ form > button {
   color: #f0e3ca;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   cursor: pointer;
 }
 
@@ -143,43 +198,37 @@ form > button {
   font-weight: bolder;
 }
 
-.socialNetworks > div > img {
-  width: 1em;
-  height: auto;
-  margin-right: 1em;
-}
-
-.welcomeContainer > a > button > img {
-  background-color: transparent;
-}
-
 .newsBlog {
   display: grid;
   margin: 1em 0;
   max-width: 320px;
-  width: 80vw;
+  width: 90vw;
   align-items: center;
+  justify-content: center;
   background-image: url(./images/travel.png);
   background-size: contain;
   background-color: #21201d;
   background-blend-mode: multiply;
+  aspect-ratio: 1 / 1;
 }
 
 .newsBlog > h3 {
-  margin-top: 1em;
   background-color: transparent;
+  margin-top: 5vw;
 }
 
 .newsBlog > hr {
   margin-left: 3.5em;
   margin-right: 3.5em;
-  color: #ff8303;
+  background-color: #ff8303;
+  border: none;
+  height: 2px;
 }
 
 .newsBlog > p {
   display: flex;
   justify-content: center;
-  margin: 1em 2.5em;
+  margin: 0.75em 1.25em;
   font-size: 1rem;
 }
 
@@ -228,7 +277,7 @@ form {
   margin: 2em auto;
 }
 
-form > input,
+form > div > input,
 textarea {
   display: flex;
   margin: 1em 0;
@@ -249,7 +298,166 @@ input:-webkit-autofill:active {
   transition: background-color  5000s ease-in-out 0s;
 }
 
-@media screen and (min-width: 501px) {
+/* Desktop version */
+@media screen and (min-width: 1060px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+  .logoContainer {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .menu-tablet {
+    display: inline-flex;
+    text-align: right;
+    justify-content: space-around;
+    gap: 5em;
+    margin-right: auto;
+  }
+
+  #welcome {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    column-gap: 2em;
+  }
+
+  .welcomeContainer {
+    min-width: 350px;
+    max-width: 500px;
+    width: 45vw;
+  }
+
+  #avatar {
+    margin: 0 auto;
+    height: auto;
+    max-width: 500px;
+    width: 45vw;
+  }
+
+  #about-me {
+    display: inline-flex;
+    margin: 4em 0;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+  }
+
+  #aboutMeLogo {
+    display: inline-flex;
+  }
+
+  #about-me > .p-container {
+    display: flex;
+    width: 65vw;
+    max-width: 600px;
+  }
+
+  .skillsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .skillsContainer > div {
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: 1em;
+    height: 23vw;
+    min-height: 270px;
+    max-height: 300px;
+    width: 20vw;
+    min-width: 180px;
+    max-width: 200px;
+    background-color: #21201d;
+    border-radius: 0.75em;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .skillsContainer img {
+    margin: auto 1em;
+    height: 8em;
+    background-color: transparent;
+  }
+
+  .skillsContainer > div > p {
+    font-size: 2em;
+  }
+
+  .myWorks {
+    display: grid;
+    grid-template-columns: repeat(3, 320px);
+    column-gap: 1em;
+    justify-content: center;
+  }
+
+  #footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 3em auto;
+    padding: 0 2em;
+    gap: 3em;
+    justify-content: space-around;
+    max-width: max-content;
+  }
+
+  .socialNetworks > div {
+    width: auto;
+  }
+
+  #footer > div {
+    margin: 0 auto;
+  }
+
+  #footer > div > .p-container {
+    display: flex;
+    margin-top: 1.5em;
+    width: 180px;
+  }
+
+  h4 {
+    text-align: left;
+  }
+
+  form {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: 17em 17em;
+    max-width: max-content;
+    margin: 2em auto;
+  }
+
+  form > div > input {
+    width: 15em;
+  }
+
+  textarea {
+    width: 32em;
+    height: 9em;
+  }
+
+  .socialNetworks {
+    display: grid;
+    margin-top: 1em;
+    justify-content: center;
+    grid-template-columns: 17em 8.5em;
+  }
+}
+
+/* Tablet version */
+@media screen and (min-width: 620px) and (max-width: 1059px) {
   header {
     display: grid;
     grid-template-columns: auto;
@@ -268,30 +476,6 @@ input:-webkit-autofill:active {
     display: inline-flex;
     justify-content: space-around;
     margin: 1em 0;
-  }
-
-  .menu-tablet > div > a:link {
-    color: #f0e3ca;
-    background-color: transparent;
-    text-decoration: none;
-  }
-
-  .menu-tablet > div > a:visited {
-    color: #f0e3ca;
-    background-color: transparent;
-    text-decoration: none;
-  }
-
-  .menu-tablet > div > a:hover {
-    color: #ff8303;
-    background-color: transparent;
-    text-decoration: none;
-  }
-
-  .menu-tablet > div > a:active {
-    color: #a35709;
-    background-color: transparent;
-    text-decoration: none;
   }
 
   #welcome > .p-container {
@@ -365,13 +549,13 @@ input:-webkit-autofill:active {
     margin: 0 auto;
   }
 
-  #footer > .p-container > p {
+  #footer > div > .p-container > p {
     width: 80vw;
     max-width: 339px;
-    margin: 0 auto;
+    margin: 0 auto 2em auto;
   }
 
-  form > input,
+  form > div > input,
   textarea {
     width: 28em;
     max-height: 10em;
@@ -386,11 +570,11 @@ input:-webkit-autofill:active {
 
   .socialNetworks > div {
     width: auto;
-    margin-left: 5px;
   }
 }
 
-@media screen and (max-width: 500px) {
+/* Mobile version */
+@media screen and (max-width: 619px) {
   header {
     display: flex;
     justify-content: space-between;
@@ -451,8 +635,8 @@ input:-webkit-autofill:active {
   }
 
   .p-container {
-    min-width: 260px;
-    max-width: 339px;
+    min-width: 240px;
+    max-width: 400px;
     width: 80vw;
     margin-left: auto;
     margin-right: auto;
@@ -485,11 +669,12 @@ input:-webkit-autofill:active {
     align-items: center;
   }
 
-  section > img {
+  section > img,
+  section > div > img {
     margin: 0 auto;
   }
 
-  form > input,
+  form > div > input,
   textarea {
     width: 15em;
   }
