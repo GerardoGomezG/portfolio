@@ -19,6 +19,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 10;
 }
 
 .menu-tablet > div > a:link {
@@ -127,6 +128,7 @@ hr {
 
 #skills > div > div:hover .hover_img {
   display: inline-flex;
+  animation: scale-up-center 0.4s;
 }
 
 #skills > div > div:hover img:first-child {
@@ -144,6 +146,11 @@ hr {
   flex-direction: column;
   margin: 0 auto;
   row-gap: 1em;
+  animation: scale-up-top-left 0.4s linear both;
+}
+
+.avatarContainer {
+  animation: scale-up-right 0.4s linear both;
 }
 
 .welcomeContainer > * {
@@ -180,6 +187,10 @@ form > div > button {
   margin-right: auto;
   margin-bottom: 1em;
   cursor: pointer;
+}
+
+form button:active {
+  animation: rotate-scale-down 0.4s linear both;
 }
 
 .welcomeContainer > a > button {
@@ -296,6 +307,55 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
   -webkit-text-fill-color: #f0e3ca;
   transition: background-color  5000s ease-in-out 0s;
+}
+
+/* Animation features */
+@keyframes scale-up-top-left {
+  0% {
+    transform: scale(0.5);
+    transform-origin: top left;
+  }
+
+  100% {
+    transform: scale(1);
+    transform-origin: top left;
+  }
+}
+
+@keyframes scale-up-right {
+  0% {
+    transform: scale(0.5);
+    transform-origin: right center;
+  }
+
+  100% {
+    transform: scale(1);
+    transform-origin: right center;
+  }
+}
+
+@keyframes scale-up-center {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(2);
+  }
+}
+
+@keyframes rotate-scale-down {
+  0% {
+    transform: scale(1) rotateZ(0);
+  }
+
+  50% {
+    transform: scale(0.5) rotateZ(180deg);
+  }
+
+  100% {
+    transform: scale(1) rotateZ(360deg);
+  }
 }
 
 /* Desktop version */
