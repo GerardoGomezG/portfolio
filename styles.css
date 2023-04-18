@@ -216,7 +216,7 @@ form button:active {
   width: 90vw;
   align-items: center;
   justify-content: center;
-  background-image: url(./images/travel.png);
+  background-image: url(./images/travel.webp);
   background-size: contain;
   background-color: #21201d;
   background-blend-mode: multiply;
