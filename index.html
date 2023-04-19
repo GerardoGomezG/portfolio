@@ -2,6 +2,8 @@
 <html lang="en-US">
     <head>
         <meta charset="UTF-8">
+        <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="styles.css"></noscript>
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-XEZKG9YX9K"></script>
         <script>
@@ -11,21 +13,19 @@
 
             gtag('config', 'G-XEZKG9YX9K');
         </script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700;900&display=swap" rel="stylesheet">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1b1a17">
         <meta name="description" content="Gerardo Gomez's Portfolio. Frontend Developer and Electrical Engineer. Resume, skills, works, contact form and social networks.">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700;900&display=swap" rel="stylesheet"> 
-        <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="styles.css"></noscript>
         <link rel="icon" href="./images/avatar.webp">
         <title>Gerardo's Portfolio</title>
     </head>
     <header>
         <div class="logoContainer">
-            <img src="./images/logo.svg" alt="Gerardo Gomez">
+            <img class="gerardoLogo" src="./images/logo.svg" alt="Gerardo Gomez">
         </div>
         <div class="menu-button"> <!--onclick="myFunction(this)">-->
             <div class="menu-button-bar1"></div>
