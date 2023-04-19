@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
+        <meta charset="UTF-8">
+        <title>Gerardo's Portfolio</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700;900&display=swap" rel="stylesheet">
+        <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="styles.css"></noscript>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1b1a17">
+        <meta name="description" content="Gerardo Gomez's Portfolio. Frontend Developer and Electrical Engineer. Resume, skills, works, contact form and social networks.">
+        <link rel="icon" href="./images/avatar.svg">
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-XEZKG9YX9K"></script>
         <script>
@@ -10,19 +22,10 @@
 
             gtag('config', 'G-XEZKG9YX9K');
         </script>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700;900&display=swap" rel="stylesheet"> 
-        <link rel="stylesheet" href="styles.css">
-        <link rel="icon" href="./images/avatar.png">
-        <title>Gerardo's Portfolio</title>
     </head>
     <header>
         <div class="logoContainer">
-            <img src="./images/logo.png" alt="Gerardo Gomez">
+            <img class="gerardoLogo" src="./images/logo.svg" alt="Gerardo Gomez">
         </div>
         <div class="menu-button"> <!--onclick="myFunction(this)">-->
             <div class="menu-button-bar1"></div>
@@ -45,15 +48,15 @@
                     <p>Frontend Developer with a degree in Electrical Engineering who enjoys working on projects</p>
                 </div>
                 <a href="./docs/resume.pdf" target="_blank" download>
-                    <button type="button"><img src="./images/icons/icon resume.png" alt="CV">GET MY RESUME</button>
+                    <button type="button"><img src="./images/icons/icon resume.svg" alt="CV">GET MY RESUME</button>
                 </a>
             </div>
             <div class="avatarContainer">
-                <img id="avatar" src="./images/avatar.png" alt="my avatar">
+                <img id="avatar" src="./images/avatar.svg" alt="my avatar">
             </div>
         </section><hr>
         <section id="about-me">
-            <img id="aboutMeLogo" src="./images/icons/Logo.png" alt="logo"><br>
+            <img id="aboutMeLogo" src="./images/icons/logo.svg" alt="logo"><br>
             <div class="p-container">
                 <p>A few years ago, I became interested in developing websites and interfaces. 
                     Since then I have been steadily improving my skills. Now I am developing websites and
@@ -65,29 +68,29 @@
             <h3>My Skills</h3><br>
             <div class="skillsContainer">
                 <div class="htmlContainer">
-                    <img src="./images/icons/icon html.png" alt="html logo">
-                    <img class="hover_img" src="./images/icons/hover/icon html -- hover.png" alt="html logo hover">
+                    <img src="./images/icons/icon html.webp" alt="html logo">
+                    <img class="hover_img" src="./images/icons/hover/icon html -- hover.webp" alt="html logo hover">
                     <p>HTML 5</p>
                 </div>
                 <div class="cssContainer">
-                    <img src="./images/icons/icon css.png" alt="css logo">
-                    <img class="hover_img" src="./images/icons/hover/icon css - hover.png" alt="css logo hover">
+                    <img src="./images/icons/icon css.webp" alt="css logo">
+                    <img class="hover_img" src="./images/icons/hover/icon css - hover.webp" alt="css logo hover">
                     <p>CSS3</p>
                     </p>
                 </div>
                 <div class="jsContainer">
-                    <img src="./images/icons/icon js.png" alt="js logo">
-                    <img class="hover_img" src="./images/icons/hover/icon js -- hover.png" alt="js logo hover">
+                    <img src="./images/icons/icon js.webp" alt="js logo">
+                    <img class="hover_img" src="./images/icons/hover/icon js -- hover.webp" alt="js logo hover">
                     <p>JavaScript</p>
                 </div>
                 <div class="scssContainer">
-                    <img src="./images/icons/icon scss.png" alt="scss logo">
-                    <img class="hover_img" src="./images/icons/hover/icon-scss-hover.png" alt="scss logo hover">
+                    <img src="./images/icons/icon scss.webp" alt="scss logo">
+                    <img class="hover_img" src="./images/icons/hover/icon-scss-hover.webp" alt="scss logo hover">
                     <p>SCSS</p>
                 </div>
                 <div class="gitContainer">
-                    <img src="./images/icons/icon git.png" alt="git logo">
-                    <img class="hover_img" src="./images/icons/hover/icon git -- hover.png" alt="git logo hover">
+                    <img src="./images/icons/icon git.webp" alt="git logo">
+                    <img class="hover_img" src="./images/icons/hover/icon git -- hover.webp" alt="git logo hover">
                     <p>Git</p>
                 </div>
             </div>
@@ -103,7 +106,7 @@
                         <button type="button">See more &rarr;</button>
                     </div>
                     <div class="blank">
-                        <img src="./images/travel.png">
+                        <img src="./images/travel.webp" alt="travel site">
                     </div>
                     <div class="newsBlog">
                         <h3>News Blog</h3>
@@ -133,7 +136,7 @@
         </form>
         <section id="footer">
             <div>
-                <img id="footerLogo" src="./images/logo.png" alt="logo"><br>
+                <img id="footerLogo" src="./images/logo.svg" alt="logo"><br>
                 <div class="p-container">
                     <p>If you liked my work and you need me, I'm ready to talk to you.</p>
                 </div><br>
@@ -142,19 +145,19 @@
                 <h4>Contacts</h4>
                 <div class="socialNetworks">
                     <div class="emailContainer">
-                        <img src="./images/icons/icon mail.png" alt="email logo">
-                        <ol>ing.gerardogomez@gmail.com</ol>
+                        <img src="./images/icons/icon mail.webp" alt="email logo">
+                        <a href="mailto:ing.gerardogomez@gmail.com" target="-blank" rel="noopener">ing.gerardogomez@gmail.com</a>
                     </div>
                     <div class="telegramContainer">
-                        <img src="./images/icons/icon telegram.png" alt="telegram logo">
+                        <img src="./images/icons/icon telegram.webp" alt="telegram logo">
                         <a href="https://t.me/GerardoGomezG" target="_blank" rel="noopener">GerardoGomezG</a>
                     </div>
                     <div class="gitHubContainer">
-                        <img src="./images/icons/icon github.png" alt="github logo">
+                        <img src="./images/icons/icon github.webp" alt="github logo">
                         <a href="https://github.com/GerardoGomezG" target="_blank" rel="noopener">GerardoGomezG</a>
                     </div>
                     <div class="linkedinContainer">
-                        <img src="./images/icons/icon linkedin.png" alt="linkedin logo">
+                        <img src="./images/icons/icon linkedin.webp" alt="linkedin logo">
                         <a href="https://www.linkedin.com/in/gomez-gerardo/?locale=en_US" target="_blank" rel="noopener">GerardoGomezG</a>
                     </div>
                 </div>
