@@ -10,6 +10,12 @@
 img {
   display: flex;
   height: 2.5em;
+  aspect-ratio: 1 / 1;
+}
+
+.gerardoLogo,
+#footerLogo {
+  aspect-ratio: 4 / 1;
 }
 
 header {
@@ -56,6 +62,7 @@ body {
   height: auto;
   max-width: 629px;
   width: 70vw;
+  aspect-ratio: 500 / 558;
 }
 
 section {
@@ -109,6 +116,7 @@ hr {
   max-width: 320px;
   width: 90vw;
   height: auto;
+  aspect-ratio: 1 / 1;
 }
 
 .socialNetworks > div > img {
@@ -146,11 +154,11 @@ hr {
   flex-direction: column;
   margin: 0 auto;
   row-gap: 1em;
-  animation: scale-up-top-left 0.4s linear both;
+  animation: bounce-top 0.9s linear both;
 }
 
 .avatarContainer {
-  animation: scale-up-right 0.4s linear both;
+  animation: rotate-horizontal-center 0.4s;
 }
 
 .welcomeContainer > * {
@@ -216,7 +224,7 @@ form button:active {
   width: 90vw;
   align-items: center;
   justify-content: center;
-  background-image: url(./images/travel.png);
+  background-image: url(./images/travel.webp);
   background-size: contain;
   background-color: #21201d;
   background-blend-mode: multiply;
@@ -310,27 +318,59 @@ input:-webkit-autofill:active {
 }
 
 /* Animation features */
-@keyframes scale-up-top-left {
+@keyframes bounce-top {
   0% {
-    transform: scale(0.5);
-    transform-origin: top left;
+    transform: translateY(-45px);
+    animation-timing-function: ease-in;
+    opacity: 1;
+  }
+
+  24% {
+    opacity: 1;
+  }
+
+  40% {
+    transform: translateY(-24px);
+    animation-timing-function: ease-in;
+  }
+
+  65% {
+    transform: translateY(-12px);
+    animation-timing-function: ease-in;
+  }
+
+  82% {
+    transform: translateY(-6px);
+    animation-timing-function: ease-in;
+  }
+
+  93% {
+    transform: translateY(-4px);
+    animation-timing-function: ease-in;
+  }
+
+  25%,
+  55%,
+  75%,
+  87% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
   }
 
   100% {
-    transform: scale(1);
-    transform-origin: top left;
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+    opacity: 1;
   }
 }
 
-@keyframes scale-up-right {
+@keyframes rotate-horizontal-center {
   0% {
-    transform: scale(0.5);
-    transform-origin: right center;
+    transform: rotateX(0);
   }
 
   100% {
-    transform: scale(1);
-    transform-origin: right center;
+    transform: rotateX(-360deg);
   }
 }
 
