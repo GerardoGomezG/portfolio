@@ -415,6 +415,10 @@ input:-webkit-autofill:active {
     margin-right: auto;
   }
 
+  .menuMobile {
+    display: none;
+  }
+
   .menu-tablet {
     display: inline-flex;
     text-align: right;
@@ -572,6 +576,10 @@ input:-webkit-autofill:active {
     display: none;
   }
 
+  .menuMobile {
+    display: none;
+  }
+
   .menu-tablet {
     display: inline-flex;
     justify-content: space-around;
@@ -702,36 +710,55 @@ input:-webkit-autofill:active {
     transition: 0.4s;
   }
 
-  /* Rotate first bar with JavaScript - JS code pending */
+  .menuMobile {
+    display: none;
+    position: fixed;
+    top: 3.5em;
+    left: 0;
+    overflow: hidden;
+    flex-direction: column;
+    z-index: 10;
+    opacity: 90%;
+  }
+
+  .menuMobile a {
+    display: flex;
+    color: #f0e3ca;
+    padding: 1em 0;
+    width: 100vw;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 700;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .menuMobile a:hover {
+    color: #ff8303;
+  }
+
+  .menuMobile a:active {
+    color: #ff8303;
+  }
+
+  /* Rotate first bar with JavaScript */
   .change .menu-button-bar1 {
     transform: translate(0, 11px) rotate(-45deg);
   }
 
-  /* Fade out the second bar with JavaScript - JS code pending */
-  .change .menu-button-bar2 { opacity: 0; }
+  /* Fade out the second bar with JavaScript */
+  .change .menu-button-bar2 {
+    opacity: 0;
+  }
 
-  /* Rotate last bar with JavaScript - JS code pending */
+  /* Rotate last bar with JavaScript */
   .change .menu-button-bar3 {
     transform: translate(0, -11px) rotate(45deg);
   }
 
-  .menu {
+  /* Shows mobile menu */
+  .change .menuMobile {
     display: flex;
-    overflow: hidden;
-  }
-
-  .menu a {
-    display: flex;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 1em 1em;
-    text-decoration: none;
-    font-size: 1em;
-  }
-
-  .menu a:hover {
-    background-color: #ddd;
-    color: black;
   }
 
   .p-container {
