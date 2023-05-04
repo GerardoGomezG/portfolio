@@ -139,6 +139,20 @@ hr {
   animation: scale-up-center 0.4s;
 }
 
+#modal button > img {
+  padding: 0.5em;
+  height: 1em;
+  width: 1em;
+}
+
+#modal div > div > img {
+  margin: 0 auto;
+  aspect-ratio: 1 / 1;
+  height: 30vw;
+  min-height: 180px;
+  max-height: 300px;
+}
+
 #skills > div > div:hover img:first-child {
   display: none;
 }
@@ -236,7 +250,8 @@ form button:active {
   margin-top: 5vw;
 }
 
-.newsBlog > hr {
+.newsBlog > hr,
+#modal hr {
   margin-left: 3.5em;
   margin-right: 3.5em;
   background-color: #ff8303;
@@ -244,11 +259,54 @@ form button:active {
   height: 2px;
 }
 
-.newsBlog > p {
+.newsBlog > p,
+#modal p {
   display: flex;
   justify-content: center;
   margin: 0.75em 1.25em;
   font-size: 1rem;
+}
+
+.socialNetworks > div {
+  display: flex;
+  height: 2.5em;
+  align-items: center;
+}
+
+#modal span {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  width: 100%;
+}
+
+#modal button {
+  display: flex;
+  margin: 0.5em;
+  cursor: pointer;
+  text-align: center;
+  color: transparent;
+  border-color: #ff8303;
+}
+
+#modal > div {
+  display: flex;
+  margin: 1em;
+  max-width: 80vw;
+}
+
+#modal {
+  margin: auto auto;
+  max-width: 80vw;
+  max-height: max-content;
+  justify-content: center;
+  align-items: center;
+  border-color: #ff8303;
+  border-radius: 10px;
+  border-width: 1px;
+}
+
+#modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .socialNetworks > div > a:link {
@@ -275,12 +333,6 @@ form button:active {
   text-decoration: underline;
 }
 
-.socialNetworks > div {
-  display: flex;
-  height: 2.5em;
-  align-items: center;
-}
-
 label,
 .socialNetworks > * {
   color: #ff8303;
@@ -299,7 +351,7 @@ form {
 form > div > input,
 textarea {
   display: flex;
-  margin: 1em 0;
+  margin: 1em auto;
   padding: 1em 8px;
   border-color: #ff8303;
   border-radius: 10px;
@@ -506,6 +558,14 @@ input:-webkit-autofill:active {
     justify-content: center;
   }
 
+  .socialNetworks > div {
+    width: auto;
+  }
+
+  #modal > div {
+    max-width: 600px;
+  }
+
   #footer {
     display: flex;
     flex-direction: row;
@@ -515,10 +575,6 @@ input:-webkit-autofill:active {
     gap: 3em;
     justify-content: space-around;
     max-width: max-content;
-  }
-
-  .socialNetworks > div {
-    width: auto;
   }
 
   #footer > div {
@@ -653,6 +709,14 @@ input:-webkit-autofill:active {
     font-size: 2em;
   }
 
+  .socialNetworks > div {
+    width: auto;
+  }
+
+  #modal > div {
+    max-width: 600px;
+  }
+
   #footerLogo {
     margin: 0 auto;
   }
@@ -674,10 +738,6 @@ input:-webkit-autofill:active {
     margin-top: 1em;
     justify-content: center;
     grid-template-columns: 18em 10em;
-  }
-
-  .socialNetworks > div {
-    width: auto;
   }
 }
 
@@ -796,6 +856,14 @@ input:-webkit-autofill:active {
     align-items: center;
   }
 
+  .socialNetworks > div {
+    width: max-content;
+  }
+
+  #modal > div {
+    flex-direction: column-reverse;
+  }
+
   section > img,
   section > div > img {
     margin: 0 auto;
@@ -811,9 +879,5 @@ input:-webkit-autofill:active {
     flex-direction: column;
     margin: 0 auto;
     max-width: max-content;
-  }
-
-  .socialNetworks > div {
-    width: max-content;
   }
 }
