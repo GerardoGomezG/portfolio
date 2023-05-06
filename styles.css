@@ -245,6 +245,10 @@ form button:active {
   aspect-ratio: 1 / 1;
 }
 
+.newsBlog:hover {
+  background-color: transparent;
+}
+
 .newsBlog > h3 {
   background-color: transparent;
   margin-top: 5vw;
@@ -274,9 +278,11 @@ form button:active {
 }
 
 #modal span {
+  position: absolute;
   display: inline-flex;
   flex-direction: row-reverse;
   width: 100%;
+  background-color: transparent;
 }
 
 #modal button {
