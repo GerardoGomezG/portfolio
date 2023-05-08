@@ -159,8 +159,10 @@ hr {
 
 .myWorks {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
 }
 
 .welcomeContainer {
@@ -207,7 +209,6 @@ form > div > button {
   color: #f0e3ca;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 1em;
   cursor: pointer;
 }
 
@@ -237,8 +238,8 @@ form button:active {
   max-width: 320px;
   width: 90vw;
   align-items: center;
-  justify-content: center;
-  background-image: url(./images/travel.webp);
+
+  /* background-image: url(./images/travel.webp); */
   background-size: contain;
   background-color: #21201d;
   background-blend-mode: multiply;
@@ -251,7 +252,6 @@ form button:active {
 
 .newsBlog > h3 {
   background-color: transparent;
-  margin-top: 5vw;
 }
 
 .newsBlog > hr,
@@ -557,13 +557,6 @@ input:-webkit-autofill:active {
     font-size: 2em;
   }
 
-  .myWorks {
-    display: grid;
-    grid-template-columns: repeat(3, 320px);
-    column-gap: 1em;
-    justify-content: center;
-  }
-
   .socialNetworks > div {
     width: auto;
   }
@@ -859,6 +852,11 @@ input:-webkit-autofill:active {
     background-color: #21201d;
     border-radius: 0.75em;
     gap: 1em;
+    align-items: center;
+  }
+
+  .myWorks {
+    flex-direction: column;
     align-items: center;
   }
 
