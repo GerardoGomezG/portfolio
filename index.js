@@ -51,6 +51,7 @@ const projectCard = [{
 }];
 
 projectCard.forEach((element) => {
+  template.querySelector('.newsBlog').style.backgroundImage = `url(${element.src})`;
   template.querySelector('.newsBlog h3').textContent = element.title;
   template.querySelector('.newsBlog p').textContent = element.subtitle;
   template.querySelector('.description').textContent = element.description;

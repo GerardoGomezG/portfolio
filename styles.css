@@ -238,8 +238,6 @@ form button:active {
   max-width: 320px;
   width: 90vw;
   align-items: center;
-
-  /* background-image: url(./images/travel.webp); */
   background-size: contain;
   background-color: #21201d;
   background-blend-mode: multiply;
@@ -250,7 +248,6 @@ form button:active {
   background-color: transparent;
 }
 
-/* Code for .newsBlog hover start */
 .newsBlog:hover {
   background-color: transparent;
 }
@@ -265,14 +262,19 @@ form button:active {
   user-select: none;
 }
 
+.newsBlog > hr {
+  margin-left: 3.5em;
+  margin-right: 3.5em;
+  background-color: #ff8303;
+  border: none;
+  height: 2px;
+}
+
 .newsBlogHover hr {
   background-color: transparent;
   user-select: none;
 }
 
-/* Code for .newsBlog hover end */
-
-.newsBlog > hr,
 #modal hr {
   margin-left: 3.5em;
   margin-right: 3.5em;
@@ -316,6 +318,10 @@ form button:active {
   display: flex;
   margin: 1em;
   max-width: 80vw;
+}
+
+#modal div > div {
+  margin: auto;
 }
 
 #modal {
