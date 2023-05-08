@@ -246,13 +246,31 @@ form button:active {
   aspect-ratio: 1 / 1;
 }
 
+.newsBlog > h3 {
+  background-color: transparent;
+}
+
+/* Code for .newsBlog hover start */
 .newsBlog:hover {
   background-color: transparent;
 }
 
-.newsBlog > h3 {
-  background-color: transparent;
+.newsBlogHover h3 {
+  color: transparent;
+  user-select: none;
 }
+
+.newsBlogHover p {
+  color: transparent;
+  user-select: none;
+}
+
+.newsBlogHover hr {
+  background-color: transparent;
+  user-select: none;
+}
+
+/* Code for .newsBlog hover end */
 
 .newsBlog > hr,
 #modal hr {
@@ -357,7 +375,7 @@ form {
 form > div > input,
 textarea {
   display: flex;
-  margin: 1em auto;
+  margin: 1em 0;
   padding: 1em 8px;
   border-color: #ff8303;
   border-radius: 10px;
