@@ -4,27 +4,6 @@ x.addEventListener('click', () => {
   x.classList.toggle('change');
 });
 
-// Popup window
-
-// Static design: start
-// const openModalBtn = document.querySelector('#openModal');
-// const openModalBtn2 = document.querySelector('#openModal2');
-// const closeModalBtn = document.querySelector('#closeModal');
-// const modal = document.querySelector('#modal');
-
-// openModalBtn.addEventListener('click', () => {
-// modal.showModal();
-// });
-
-// openModalBtn2.addEventListener('click', () => {
-// modal.showModal();
-// });
-
-// closeModalBtn.addEventListener('click', () => {
-// modal.close();
-// });
-// Static design: end
-
 // Dynamic design: start
 const works = document.querySelector('.myWorks');
 const template = document.querySelector('template').content;
@@ -76,3 +55,17 @@ projectCard.forEach((element) => {
 });
 
 works.appendChild(fragment);
+
+// Popup window
+
+const openModalBtn = document.querySelector('#openModal');
+const closeModalBtn = document.querySelector('#closeModal');
+const modal = document.querySelector('#modal');
+
+openModalBtn.addEventListener('click', () => {
+  modal.showModal();
+});
+
+closeModalBtn.addEventListener('click', () => {
+  modal.close();
+});
