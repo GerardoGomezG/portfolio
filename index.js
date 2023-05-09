@@ -46,7 +46,7 @@ projectCard.forEach((element) => {
   template.querySelector('.modal h3').textContent = element.title;
   template.querySelector('.modal p').textContent = element.subtitle;
   template.querySelector('#description').textContent = element.description;
-  template.querySelector('.modal a').setAttribute('hef', element.url);
+  template.querySelector('.modal a').setAttribute('href', element.url);
 
   const clone = document.importNode(template, true);
   fragment.appendChild(clone);
@@ -70,7 +70,7 @@ openModalBtn.forEach((btn) => {
 projectLink.forEach((a) => {
   a.addEventListener('click', (e) => {
     e.preventDefault();
-    window.open(e.currentTarget.getAttribute('hef'), '_blank');
+    window.open(e.currentTarget.getAttribute('href'), '_blank');
   });
 });
 

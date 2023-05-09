@@ -30,18 +30,17 @@ header {
 
 .modal a {
   display: flex;
-  cursor: pointer;
   margin-bottom: 1em;
   justify-content: center;
   text-align: center;
   align-items: center;
-  color: #ff8303;
 }
 
 .modal a:link {
   color: #ff8303;
   background-color: transparent;
   text-decoration: none;
+  text-align: center;
 }
 
 .modal a:visited {
