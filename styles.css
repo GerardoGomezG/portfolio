@@ -125,6 +125,12 @@ hr {
   margin-right: 0.75em;
 }
 
+.modal button > img {
+  padding: 0.5em;
+  height: 1em;
+  width: 1em;
+}
+
 .welcomeContainer > a > button > img {
   background-color: transparent;
 }
@@ -139,13 +145,7 @@ hr {
   animation: scale-up-center 0.4s;
 }
 
-#modal button > img {
-  padding: 0.5em;
-  height: 1em;
-  width: 1em;
-}
-
-#modal div > div > img {
+.modal div > div > img {
   margin: 0 auto;
   aspect-ratio: 1 / 1;
   height: 30vw;
@@ -318,6 +318,7 @@ form button:active {
   display: flex;
   margin: 1em;
   max-width: 80vw;
+  max-height: 80%;
 }
 
 .modal div > div {
@@ -585,7 +586,7 @@ input:-webkit-autofill:active {
     width: auto;
   }
 
-  #modal > div {
+  .modal > div {
     max-width: 600px;
   }
 
@@ -736,7 +737,7 @@ input:-webkit-autofill:active {
     width: auto;
   }
 
-  #modal > div {
+  .modal > div {
     max-width: 600px;
   }
 
@@ -888,10 +889,6 @@ input:-webkit-autofill:active {
     width: max-content;
   }
 
-  #modal > div {
-    flex-direction: column-reverse;
-  }
-
   section > img,
   section > div > img {
     margin: 0 auto;
@@ -907,5 +904,12 @@ input:-webkit-autofill:active {
     flex-direction: column;
     margin: 0 auto;
     max-width: max-content;
+  }
+
+  /* Modal window display changes only in portrait orientation */
+  @media screen and (orientation: portrait) {
+    .modal > div {
+      flex-direction: column-reverse;
+    }
   }
 }

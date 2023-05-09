@@ -29,13 +29,6 @@ const projectCard = [{
   subtitle: 'HTML, SCSS, JS',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   src: './images/travel.webp',
-},
-{
-  id: '3',
-  title: 'News Blog 3',
-  subtitle: 'HTML, SCSS, JS',
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-  src: './images/travel.webp',
 }];
 
 projectCard.forEach((element) => {
