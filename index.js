@@ -53,7 +53,6 @@ works.appendChild(fragment);
 // Popup window
 const openModalBtn = document.querySelectorAll('.openModal');
 const closeModalBtn = document.querySelectorAll('.closeModal');
-console.log(closeModalBtn);
 
 openModalBtn.forEach((btn) => {
   btn.addEventListener('click', (e) => {
