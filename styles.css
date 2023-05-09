@@ -28,6 +28,40 @@ header {
   z-index: 10;
 }
 
+.modal a {
+  display: flex;
+  cursor: pointer;
+  margin-bottom: 1em;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: #ff8303;
+}
+
+.modal a:link {
+  color: #ff8303;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.modal a:visited {
+  color: #ff8303;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.modal a:hover {
+  color: #f0e3ca;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.modal a:active {
+  color: #a35709;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
 .menu-tablet > div > a:link {
   color: #f0e3ca;
   background-color: transparent;

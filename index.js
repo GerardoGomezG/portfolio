@@ -15,6 +15,7 @@ const projectCard = [{
   subtitle: 'HTML, SCSS, JS',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   src: './images/travel.webp',
+  url: 'https://github.com/GerardoGomezG/portfolio',
 },
 {
   id: '2',
@@ -22,6 +23,7 @@ const projectCard = [{
   subtitle: 'HTML, SCSS, JS',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   src: './images/travel.webp',
+  url: 'https://github.com/GerardoGomezG/portfolio',
 },
 {
   id: '3',
@@ -29,6 +31,7 @@ const projectCard = [{
   subtitle: 'HTML, SCSS, JS',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   src: './images/travel.webp',
+  url: 'https://github.com/GerardoGomezG/portfolio',
 }];
 
 projectCard.forEach((element) => {
@@ -43,6 +46,7 @@ projectCard.forEach((element) => {
   template.querySelector('.modal h3').textContent = element.title;
   template.querySelector('.modal p').textContent = element.subtitle;
   template.querySelector('#description').textContent = element.description;
+  template.querySelector('.modal a').setAttribute('hef', element.url);
 
   const clone = document.importNode(template, true);
   fragment.appendChild(clone);
@@ -50,16 +54,27 @@ projectCard.forEach((element) => {
 
 works.appendChild(fragment);
 
-// Popup window
+// Modal (popup) window
 const openModalBtn = document.querySelectorAll('.openModal');
 const closeModalBtn = document.querySelectorAll('.closeModal');
+const projectLink = document.querySelectorAll('.modal a');
 
+// Open modal window
 openModalBtn.forEach((btn) => {
   btn.addEventListener('click', (e) => {
     document.getElementById(`modal${e.target.id}`).showModal();
   });
 });
 
+// URL in modal window activation
+projectLink.forEach((a) => {
+  a.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.open(e.currentTarget.getAttribute('hef'), '_blank');
+  });
+});
+
+// Close modal window
 closeModalBtn.forEach((btn) => {
   btn.addEventListener('click', (e) => {
     document.getElementById(`modal${e.currentTarget.id}`).close();
@@ -76,3 +91,5 @@ y.forEach((z) => {
     z.classList.toggle('newsBlogHover');
   });
 });
+
+// Dynamic design: end
