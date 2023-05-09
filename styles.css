@@ -126,7 +126,6 @@ hr {
 }
 
 .modal button > img {
-  padding: 0.5em;
   height: 1em;
   width: 1em;
 }
@@ -214,11 +213,15 @@ form > div > button {
 
 .modal button {
   display: flex;
-  margin: 0.5em;
+  position: absolute;
+  top: -1em;
+  right: -1em;
+  padding: 0.5em;
   cursor: pointer;
   text-align: center;
   color: transparent;
   border-color: #ff8303;
+  border-radius: 20px;
 }
 
 form button:active {
@@ -326,6 +329,7 @@ form button:active {
 }
 
 .modal {
+  overflow: inherit;
   margin: auto auto;
   max-width: 80vw;
   max-height: max-content;
