@@ -212,6 +212,15 @@ form > div > button {
   cursor: pointer;
 }
 
+.modal button {
+  display: flex;
+  margin: 0.5em;
+  cursor: pointer;
+  text-align: center;
+  color: transparent;
+  border-color: #ff8303;
+}
+
 form button:active {
   animation: rotate-scale-down 0.4s linear both;
 }
@@ -275,7 +284,7 @@ form button:active {
   user-select: none;
 }
 
-#modal hr {
+.modal hr {
   margin-left: 3.5em;
   margin-right: 3.5em;
   background-color: #ff8303;
@@ -284,7 +293,7 @@ form button:active {
 }
 
 .newsBlog > p,
-#modal p {
+.modal p {
   display: flex;
   justify-content: center;
   margin: 0.75em 1.25em;
@@ -297,7 +306,7 @@ form button:active {
   align-items: center;
 }
 
-#modal span {
+.modal span {
   position: absolute;
   display: inline-flex;
   flex-direction: row-reverse;
@@ -305,26 +314,17 @@ form button:active {
   background-color: transparent;
 }
 
-#modal button {
-  display: flex;
-  margin: 0.5em;
-  cursor: pointer;
-  text-align: center;
-  color: transparent;
-  border-color: #ff8303;
-}
-
-#modal > div {
+.modal > div {
   display: flex;
   margin: 1em;
   max-width: 80vw;
 }
 
-#modal div > div {
+.modal div > div {
   margin: auto;
 }
 
-#modal {
+.modal {
   margin: auto auto;
   max-width: 80vw;
   max-height: max-content;
@@ -335,7 +335,7 @@ form button:active {
   border-width: 1px;
 }
 
-#modal::backdrop {
+.modal::backdrop {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
