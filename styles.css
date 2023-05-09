@@ -297,11 +297,7 @@ form button:active {
   background-color: transparent;
 }
 
-.newsBlogHover h3 {
-  color: transparent;
-  user-select: none;
-}
-
+.newsBlogHover h3,
 .newsBlogHover p {
   color: transparent;
   user-select: none;
