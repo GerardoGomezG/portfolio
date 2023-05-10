@@ -39,7 +39,7 @@ projectCard.forEach((element) => {
   template.querySelector('.newsBlog h3').textContent = element.title;
   template.querySelector('.newsBlog p').textContent = element.subtitle;
   template.querySelector('.description').textContent = element.description;
-  template.querySelector('.newsBlog button').setAttribute('id', element.id);
+  template.querySelector('.openModal').setAttribute('id', `button${element.id}`);
   template.querySelector('.modal').setAttribute('id', `modal${element.id}`);
   template.querySelector('.closeModal').setAttribute('id', element.id);
   template.querySelector('#projectImg').setAttribute('src', element.src);
@@ -62,7 +62,9 @@ const projectLink = document.querySelectorAll('.modal a');
 // Open modal window
 openModalBtn.forEach((btn) => {
   btn.addEventListener('click', (e) => {
-    document.getElementById(`modal${e.target.id}`).showModal();
+    // Gets the id number for the button id string (e.g.: button1. Gets: 1)
+    const idNumber = e.target.id.replace('button', '');
+    document.getElementById(`modal${idNumber}`).showModal();
   });
 });
 
