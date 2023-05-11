@@ -95,3 +95,34 @@ y.forEach((z) => {
 });
 
 // Dynamic design: end
+
+// Contact Form Validation
+const nameInputField = document.querySelector('[name=name]');
+const emailInputField = document.querySelector('[name=email]');
+const messageInputField = document.querySelector('[name=message]');
+
+const validateNoEmptyField = (message, e) => {
+  const field = e.target;
+  // Deletes blank spaces at the beginning and end of the string
+  const fieldValue = e.target.value.trim();
+  // Determines if the field is empty
+  if (fieldValue.length === 0) {
+    // Sets 'invalid' class to field
+    field.classList.add('invalid');
+    // Sets 'error' class to <span> tag within the form
+    field.nextElementSibling.nextElementSibling.classList.add('error');
+    // Displays error message
+    field.nextElementSibling.nextElementSibling.innerText = message;
+  } else {
+    // Removes 'invalid' class to field
+    field.classList.remove('invalid');
+    // Removes 'error' class to <span> tag within the form
+    field.nextElementSibling.nextElementSibling.classList.remove('error');
+    // Removes error message
+    field.nextElementSibling.nextElementSibling.innerText = '';
+  }
+};
+
+nameInputField.addEventListener('blur', (e) => validateNoEmptyField('Please, insert your name', e));
+emailInputField.addEventListener('blur', (e) => validateNoEmptyField('E-mail is required', e));
+messageInputField.addEventListener('blur', (e) => validateNoEmptyField('No blank message permitted', e));

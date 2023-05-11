@@ -397,6 +397,16 @@ form button:active {
   text-decoration: underline;
 }
 
+.error {
+  display: block;
+  color: red;
+}
+
+.invalid {
+  border: solid 1px red;
+  box-shadow: 0 0 10px red;
+}
+
 label,
 .socialNetworks > * {
   color: #ff8303;
