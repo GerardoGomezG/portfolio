@@ -28,6 +28,39 @@ header {
   z-index: 10;
 }
 
+.modal a {
+  display: flex;
+  margin-bottom: 1em;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.modal a:link {
+  color: #ff8303;
+  background-color: transparent;
+  text-decoration: none;
+  text-align: center;
+}
+
+.modal a:visited {
+  color: #ff8303;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.modal a:hover {
+  color: #f0e3ca;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.modal a:active {
+  color: #a35709;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
 .menu-tablet > div > a:link {
   color: #f0e3ca;
   background-color: transparent;
@@ -125,6 +158,11 @@ hr {
   margin-right: 0.75em;
 }
 
+.modal button > img {
+  height: 1em;
+  width: 1em;
+}
+
 .welcomeContainer > a > button > img {
   background-color: transparent;
 }
@@ -139,14 +177,24 @@ hr {
   animation: scale-up-center 0.4s;
 }
 
+.modal div > div > img {
+  margin: 0 auto;
+  aspect-ratio: 1 / 1;
+  height: 30vw;
+  min-height: 180px;
+  max-height: 300px;
+}
+
 #skills > div > div:hover img:first-child {
   display: none;
 }
 
 .myWorks {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
 }
 
 .welcomeContainer {
@@ -193,8 +241,20 @@ form > div > button {
   color: #f0e3ca;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 1em;
   cursor: pointer;
+}
+
+.modal button {
+  display: flex;
+  position: absolute;
+  top: -1em;
+  right: -1em;
+  padding: 0.5em;
+  cursor: pointer;
+  text-align: center;
+  color: transparent;
+  border-color: #ff8303;
+  border-radius: 20px;
 }
 
 form button:active {
@@ -223,8 +283,6 @@ form button:active {
   max-width: 320px;
   width: 90vw;
   align-items: center;
-  justify-content: center;
-  background-image: url(./images/travel.webp);
   background-size: contain;
   background-color: #21201d;
   background-blend-mode: multiply;
@@ -233,7 +291,16 @@ form button:active {
 
 .newsBlog > h3 {
   background-color: transparent;
-  margin-top: 5vw;
+}
+
+.newsBlog:hover {
+  background-color: transparent;
+}
+
+.newsBlogHover h3,
+.newsBlogHover p {
+  color: transparent;
+  user-select: none;
 }
 
 .newsBlog > hr {
@@ -244,11 +311,66 @@ form button:active {
   height: 2px;
 }
 
-.newsBlog > p {
+.newsBlogHover hr {
+  background-color: transparent;
+  user-select: none;
+}
+
+.modal hr {
+  margin-left: 3.5em;
+  margin-right: 3.5em;
+  background-color: #ff8303;
+  border: none;
+  height: 2px;
+}
+
+.newsBlog > p,
+.modal p {
   display: flex;
   justify-content: center;
   margin: 0.75em 1.25em;
   font-size: 1rem;
+}
+
+.socialNetworks > div {
+  display: flex;
+  height: 2.5em;
+  align-items: center;
+}
+
+.modal span {
+  position: absolute;
+  display: inline-flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  background-color: transparent;
+}
+
+.modal > div {
+  display: flex;
+  margin: 1em;
+  max-width: 80vw;
+  max-height: 80%;
+}
+
+.modal div > div {
+  margin: auto;
+}
+
+.modal {
+  overflow: inherit;
+  margin: auto auto;
+  max-width: 80vw;
+  max-height: max-content;
+  justify-content: center;
+  align-items: center;
+  border-color: #ff8303;
+  border-radius: 10px;
+  border-width: 1px;
+}
+
+.modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .socialNetworks > div > a:link {
@@ -273,12 +395,6 @@ form button:active {
   color: #a35709;
   background-color: transparent;
   text-decoration: underline;
-}
-
-.socialNetworks > div {
-  display: flex;
-  height: 2.5em;
-  align-items: center;
 }
 
 label,
@@ -499,11 +615,12 @@ input:-webkit-autofill:active {
     font-size: 2em;
   }
 
-  .myWorks {
-    display: grid;
-    grid-template-columns: repeat(3, 320px);
-    column-gap: 1em;
-    justify-content: center;
+  .socialNetworks > div {
+    width: auto;
+  }
+
+  .modal > div {
+    max-width: 600px;
   }
 
   #footer {
@@ -515,10 +632,6 @@ input:-webkit-autofill:active {
     gap: 3em;
     justify-content: space-around;
     max-width: max-content;
-  }
-
-  .socialNetworks > div {
-    width: auto;
   }
 
   #footer > div {
@@ -653,6 +766,14 @@ input:-webkit-autofill:active {
     font-size: 2em;
   }
 
+  .socialNetworks > div {
+    width: auto;
+  }
+
+  .modal > div {
+    max-width: 600px;
+  }
+
   #footerLogo {
     margin: 0 auto;
   }
@@ -674,10 +795,6 @@ input:-webkit-autofill:active {
     margin-top: 1em;
     justify-content: center;
     grid-template-columns: 18em 10em;
-  }
-
-  .socialNetworks > div {
-    width: auto;
   }
 }
 
@@ -796,6 +913,15 @@ input:-webkit-autofill:active {
     align-items: center;
   }
 
+  .myWorks {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .socialNetworks > div {
+    width: max-content;
+  }
+
   section > img,
   section > div > img {
     margin: 0 auto;
@@ -813,7 +939,10 @@ input:-webkit-autofill:active {
     max-width: max-content;
   }
 
-  .socialNetworks > div {
-    width: max-content;
+  /* Modal window display changes only in portrait orientation */
+  @media screen and (orientation: portrait) {
+    .modal > div {
+      flex-direction: column-reverse;
+    }
   }
 }
