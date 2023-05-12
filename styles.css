@@ -338,6 +338,11 @@ form button:active {
   align-items: center;
 }
 
+form span {
+  display: block;
+  height: 2em;
+}
+
 .modal span {
   position: absolute;
   display: inline-flex;
@@ -395,6 +400,11 @@ form button:active {
   color: #a35709;
   background-color: transparent;
   text-decoration: underline;
+}
+
+.warning {
+  display: block;
+  color: yellow;
 }
 
 .error {
