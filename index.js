@@ -163,7 +163,7 @@ const validateMessageFormat = (e) => {
     // Sets 'error' class to <span> tag within the form
     field.nextElementSibling.nextElementSibling.classList.add('error');
     // Displays error message
-    field.nextElementSibling.nextElementSibling.innerText = 'Please, leave valid a message';
+    field.nextElementSibling.nextElementSibling.innerText = 'Please, leave a valid a message';
   } else {
     removeClasses(field);
     if (fieldValue.length === 500) {
