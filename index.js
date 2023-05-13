@@ -97,9 +97,31 @@ y.forEach((z) => {
 // Dynamic design: end
 
 // Contact Form Validation
+document.querySelector('form').reset();
 const nameInputField = document.querySelector('[name=name]');
 const emailInputField = document.querySelector('[name=email]');
 const messageInputField = document.querySelector('[name=message]');
+const submitBtn = document.querySelector('[type=submit]');
+submitBtn.disabled = true;
+submitBtn.style.opacity = '0.1';
+submitBtn.style.cursor = 'not-allowed';
+
+let flagName = false;
+let flagEmail = false;
+let flagMessage = false;
+
+// Activates submit button if form inputs are valid
+function submitBtnActivation() {
+  if ((flagName) && (flagEmail) && (flagMessage)) {
+    submitBtn.style.opacity = '1';
+    submitBtn.style.cursor = 'pointer';
+    submitBtn.disabled = false;
+  } else {
+    submitBtn.style.opacity = '0.1';
+    submitBtn.style.cursor = 'not-allowed';
+    submitBtn.disabled = true;
+  }
+}
 
 // Removes 'error' & 'invalid' classes
 function removeClasses(field) {
@@ -117,7 +139,8 @@ const validateNameFormat = (e) => {
   // Deletes blank spaces at the beginning and end of the string
   const fieldValue = e.target.value.trim();
   // Determines if the field string legth > 2  and regex test is true (!false)
-  if ((fieldValue.length < 1) || (fieldValue.length > 1 && !regex.test(fieldValue))) {
+  if ((fieldValue.length <= 1) || (fieldValue.length > 1 && !regex.test(fieldValue))) {
+    flagName = false;
     // Sets 'invalid' class to field
     field.classList.add('invalid');
     // Sets 'error' class to <span> tag within the form
@@ -125,21 +148,24 @@ const validateNameFormat = (e) => {
     // Displays error message
     field.nextElementSibling.nextElementSibling.innerText = 'Please enter a valid name';
   } else {
+    flagName = true;
     removeClasses(field);
     if (fieldValue.length === 30) {
       field.nextElementSibling.nextElementSibling.classList.add('warning');
       field.nextElementSibling.nextElementSibling.innerText = '30 chars max. limit';
     }
   }
+  submitBtnActivation();
 };
 
 const validateEmailFormat = (e) => {
   const field = e.target;
-  const regex = new RegExp(/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/);
+  const regex = new RegExp(/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$/);
   // Deletes blank spaces at the beginning and end of the string
   const fieldValue = e.target.value.trim();
   // Determines if the field string legth > 5 and regex test is false (!true)
   if (((fieldValue.length > 0 && !regex.test(fieldValue)) || (fieldValue.length === 0))) {
+    flagEmail = false;
     // Sets 'invalid' class to field
     field.classList.add('invalid');
     // Sets 'error' class to <span> tag within the form
@@ -147,8 +173,10 @@ const validateEmailFormat = (e) => {
     // Displays error message
     field.nextElementSibling.nextElementSibling.innerText = 'Please enter a valid e-mail';
   } else {
+    flagEmail = true;
     removeClasses(field);
   }
+  submitBtnActivation();
 };
 
 const validateMessageFormat = (e) => {
@@ -158,25 +186,25 @@ const validateMessageFormat = (e) => {
   const fieldValue = e.target.value.trim();
   // Determines if the field is empty
   if ((fieldValue.length > 0 && !regex.test(fieldValue)) || (fieldValue.length === 0)) {
+    flagMessage = false;
     // Sets 'invalid' class to field
     field.classList.add('invalid');
     // Sets 'error' class to <span> tag within the form
     field.nextElementSibling.nextElementSibling.classList.add('error');
     // Displays error message
-    field.nextElementSibling.nextElementSibling.innerText = 'Please, leave a valid a message';
+    field.nextElementSibling.nextElementSibling.innerText = 'Please, leave a valid message';
   } else {
+    flagMessage = true;
     removeClasses(field);
     if (fieldValue.length === 500) {
       field.nextElementSibling.nextElementSibling.classList.add('warning');
       field.nextElementSibling.nextElementSibling.innerText = '500 chars max. limit';
     }
   }
+  submitBtnActivation();
 };
 
 // Event listeners for Form Contact Validation
 nameInputField.addEventListener('input', validateNameFormat);
-nameInputField.addEventListener('blur', validateNameFormat);
 emailInputField.addEventListener('input', validateEmailFormat);
-emailInputField.addEventListener('blur', validateEmailFormat);
 messageInputField.addEventListener('input', validateMessageFormat);
-messageInputField.addEventListener('blur', validateMessageFormat);
