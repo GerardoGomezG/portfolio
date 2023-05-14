@@ -221,7 +221,7 @@ hr {
   justify-content: center;
 }
 
-form > div > button {
+form button {
   cursor: pointer;
   padding: 1em;
   width: fit-content;
@@ -230,18 +230,7 @@ form > div > button {
   background-color: #ff8303;
   color: #1b1a17;
   font-weight: bold;
-}
-
-.newsBlog > button {
-  height: 3em;
-  width: 8em;
-  background-color: #32312e;
-  border-radius: 0.25em;
-  border-style: none;
-  color: #f0e3ca;
-  margin-left: auto;
-  margin-right: auto;
-  cursor: pointer;
+  opacity: 1;
 }
 
 .modal button {
@@ -257,11 +246,19 @@ form > div > button {
   border-radius: 20px;
 }
 
-form button:active {
-  animation: rotate-scale-down 0.4s linear both;
+.newsBlog > button {
+  height: 3em;
+  width: 8em;
+  background-color: #32312e;
+  border-radius: 0.25em;
+  border-style: none;
+  color: #f0e3ca;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
 }
 
-.welcomeContainer > a > button {
+.welcomeContainer button {
   display: inline-flex;
   margin: 1em 0 1em auto;
   gap: 5px;
@@ -275,6 +272,10 @@ form button:active {
   background-color: #ff8303;
   color: #1b1a17;
   font-weight: bolder;
+}
+
+.welcomeContainer button:active {
+  animation: rotate-scale-down 0.4s linear both;
 }
 
 .newsBlog {
@@ -338,6 +339,11 @@ form button:active {
   align-items: center;
 }
 
+form span {
+  display: block;
+  height: 2em;
+}
+
 .modal span {
   position: absolute;
   display: inline-flex;
@@ -395,6 +401,21 @@ form button:active {
   color: #a35709;
   background-color: transparent;
   text-decoration: underline;
+}
+
+.warning {
+  display: block;
+  color: yellow;
+}
+
+.error {
+  display: block;
+  color: red;
+}
+
+.invalid {
+  border: solid 1px red;
+  box-shadow: 0 0 10px red;
 }
 
 label,
