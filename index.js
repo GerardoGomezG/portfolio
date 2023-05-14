@@ -136,11 +136,11 @@ function removeClasses(field) {
   field.nextElementSibling.nextElementSibling.innerText = '';
 }
 
-const validateNameFormat = (e) => {
-  const field = e.target;
+const validateNameFormat = () => {
+  const field = nameInputField;
   const regex = new RegExp(/^([A-Za-z\u00C0-\u00D6\u00D8-\u00f6\u00f8-\u00ff\s]*)$/);
   // Deletes blank spaces at the beginning and end of the string
-  const fieldValue = e.target.value.trim();
+  const fieldValue = field.value.trim();
   // Determines if the field string length > 2 and regex test is true (!false)
   if ((fieldValue.length <= 1) || (fieldValue.length > 1 && !regex.test(fieldValue))) {
     flagName = false;
@@ -154,15 +154,14 @@ const validateNameFormat = (e) => {
     }
   }
   localStorage.setItem('name', fieldValue);
-  localStorage.setItem('flagName', flagName);
   submitBtnActivation();
 };
 
-const validateEmailFormat = (e) => {
-  const field = e.target;
+const validateEmailFormat = () => {
+  const field = emailInputField;
   const regex = new RegExp(/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$/);
   // Deletes blank spaces at the beginning and end of the string
-  const fieldValue = e.target.value.trim();
+  const fieldValue = field.value.trim();
   // Determines if the field string legth > 5 and regex test is false (!true)
   if (((fieldValue.length > 0 && !regex.test(fieldValue)) || (fieldValue.length === 0))) {
     flagEmail = false;
@@ -172,15 +171,14 @@ const validateEmailFormat = (e) => {
     removeClasses(field);
   }
   localStorage.setItem('email', fieldValue);
-  localStorage.setItem('flagEmail', flagEmail);
   submitBtnActivation();
 };
 
-const validateMessageFormat = (e) => {
-  const field = e.target;
+const validateMessageFormat = () => {
+  const field = messageInputField;
   const regex = new RegExp(/^\S.*(?:\r?\n\S.*)*$/u);
   // Deletes blank spaces at the beginning and end of the string
-  const fieldValue = e.target.value.trim();
+  const fieldValue = field.value.trim();
   // Determines if the field is empty
   if ((fieldValue.length > 0 && !regex.test(fieldValue)) || (fieldValue.length === 0)) {
     flagMessage = false;
@@ -194,7 +192,6 @@ const validateMessageFormat = (e) => {
     }
   }
   localStorage.setItem('message', fieldValue);
-  localStorage.setItem('flagMessage', flagMessage);
   submitBtnActivation();
 };
 
@@ -211,12 +208,8 @@ document.addEventListener('DOMContentLoaded', () => {
   nameInputField.value = localStorage.getItem('name');
   emailInputField.value = localStorage.getItem('email');
   messageInputField.value = localStorage.getItem('message');
-  flagName = (localStorage.getItem('flagName') === 'true');
-  flagEmail = (localStorage.getItem('flagEmail') === 'true');
-  flagMessage = (localStorage.getItem('flagMessage') === 'true');
-  submitBtnActivation();
-  // Calls funtion for red border and font if conditions apply after loading local-storage data
-  if ((nameInputField.value.length > 0) && (!flagName)) addClasses(nameInputField);
-  if ((emailInputField.value.length > 0) && (!flagEmail)) addClasses(emailInputField);
-  if ((messageInputField.value.length > 0) && (!flagMessage)) addClasses(messageInputField);
+  // Calls validate funtions after loading local-storage data
+  if (nameInputField.value.length > 0) validateNameFormat();
+  if (emailInputField.value.length > 0) validateEmailFormat();
+  if (messageInputField.value.length > 0) validateMessageFormat();
 });
