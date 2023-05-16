@@ -200,6 +200,11 @@ nameInputField.addEventListener('input', validateNameFormat);
 emailInputField.addEventListener('input', validateEmailFormat);
 messageInputField.addEventListener('input', validateMessageFormat);
 submitBtn.addEventListener('click', () => localStorage.clear());
+window.onbeforeunload = () => {
+  nameInputField.value = '';
+  emailInputField.value = '';
+  messageInputField.value = '';
+};
 document.addEventListener('DOMContentLoaded', () => {
   submitBtn.disabled = true;
   submitBtn.style.opacity = '0.1';
