@@ -27,10 +27,16 @@
         <div class="logoContainer">
             <img class="gerardoLogo" src="./images/logo.svg" alt="Gerardo Gomez">
         </div>
-        <div class="menu-button"> <!--onclick="myFunction(this)">-->
+        <div class="menu-button">
             <div class="menu-button-bar1"></div>
             <div class="menu-button-bar2"></div>
             <div class="menu-button-bar3"></div>
+            <div class="menuMobile">
+                <div><a href="#about-me">About Me</a></div>
+                <div><a href="#skills">Skills</a></div>
+                <div><a href="#portfolio">My Works</a></div>
+                <div><a href="#footer">Contacts</a></div>
+            </div>
         </div>
         <div class="menu-tablet">
             <div><a href="#about-me">About Me</a></div>
@@ -98,23 +104,32 @@
         <section id="portfolio">
             <h3>My Works</h3><br>
                 <div class="myWorks">
-                    <div class="newsBlog">
-                        <h3>News Blog</h3>
-                        <p>HTML, SCSS, JS</p>
-                        <hr>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <button type="button">See more &rarr;</button>
-                    </div>
-                    <div class="blank">
-                        <img src="./images/travel.webp" alt="travel site">
-                    </div>
-                    <div class="newsBlog">
-                        <h3>News Blog</h3>
-                        <p>HTML, SCSS, JS</p>
-                        <hr>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <button type="button">See more &rarr;</button>
-                    </div>
+                    <template>
+                        <div class="newsBlog">
+                            <h3></h3>
+                            <p></p>
+                            <hr>
+                            <p class="description"></p>
+                            <button type="button" class="openModal">See more &rarr;</button>
+                        </div>                        
+                        <dialog class="modal">
+                            <span class="buttonContainer">
+                                <button type="button" class="closeModal" data-dismiss="modal"><img src="./images/icons/close-icon.webp" alt="close-icon"></button>
+                            </span>
+                            <div>
+                                <div>
+                                    <img id="projectImg">
+                                </div>
+                                <div>
+                                    <h3></h3>
+                                    <p></p>
+                                    <hr>
+                                    <p id="description"></p>
+                                    <a rel="noopener">Click me for further info!</a>
+                                </div>
+                            </div>
+                        </dialog>
+                    </template>               
                 </div>
             </div>
         </div>
@@ -122,15 +137,18 @@
         <form action="https://formspree.io/f/xknavyeb" method="POST">
             <div>
                 <label for="name">Name:</label><br>
-                <input type="text" name="name" maxlength="30" placeholder="Enter your full name" required><br>
+                <input type="text" name="name" maxlength="30" placeholder="Full name (30 chars max.)" required><br>
+                <span></span><br>
             </div>
             <div>
-                <label for="e-mail">e-mail:</label><br>
+                <label for="e-mail">E-mail:</label><br>
                 <input type="email" name="email" placeholder="Enter your e-mail" required><br>
+                <span></span><br>
             </div>
             <div>
                 <label for="message">Message:</label><br>
-                <textarea name="message" placeholder="Leave a message" rows="17" cols="30" maxlength="500" required></textarea><br>
+                <textarea name="message" placeholder="Leave a message (500 chars max.)" rows="17" cols="30" maxlength="500" required></textarea><br>
+                <span></span><br>
                 <button type="submit">Submit</button><br>
             </div>
         </form>
@@ -162,7 +180,7 @@
                     </div>
                 </div>
             </div>            
-            
         </section>
+        <script src="index.js"></script>
     </body>
 </html>
